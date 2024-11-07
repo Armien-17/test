@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <header><h1>Wheeler Dealer</h1>
+        <h3>Anything on wheels we Deal with!!!</h3>
+        
+    </header>
+    <nav class="nav-menu">
+
+        <button class="button" onclick="filterCars('All')">All</button></li>
+        <button class="button" onclick="filterCars('Honda')">Honda</button></li>
+        <button class="button" onclick="filterCars('BMW')">BMW</button></li>
+        <button class="button" onclick="filterCars('Toyota')">Toyota</button></li>
+    </nav>
+<section class="card">
+    <div class="Honda">
+        <img src="https://i.pinimg.com/236x/6f/32/7c/6f327c419e8e8c3127edc512b2545b4d.jpg" alt="">
+        <h4></h4>
+        <p>2001 Make: Honda Model: Civic EX Asking Price: $2,500</p>
+    </div>
+    <div class="BMW">
+        <div data-aos="flip-left"><img src="https://i.pinimg.com/474x/b0/d2/0b/b0d20b5ca33ffdf354ab7159f312e683.jpg" alt=""></div>
+        <h4></h4>
+        <p>BMW M3</p>
+    </div>
+    <div class="Toyota">
+        <img src="https://i.pinimg.com/236x/dc/90/08/dc90080347a6caa194903b002264ed7e.jpg" alt="">
+        <h4></h4>
+        <p>Toyota FJ cruiser</p>
+    </div>
+    <div class="Honda">
+        <img src="https://i.pinimg.com/236x/bb/56/71/bb56713fff1ed8b45393c457084f6525.jpg" alt="">
+        <h4></h4>
+        <p>Honda civic 2004</p>
+    </div>
+    <div class="BMW">
+        <img src="https://i.pinimg.com/236x/bb/10/cb/bb10cbf6276bf5d06bc51b3348896926.jpg" alt="">
+        <h4></h4>
+        <p>BMW 323ci</p>
+    </div>
+    <div class="Toyota">
+        <img src="https://i.pinimg.com/236x/c9/09/57/c90957a8ff98dc3d70760c44bc90e9c3.jpg" alt="">
+        <h4></h4>
+        <p>Toyota Hilux 2019</p>
+    </div>
+    <div class="Honda">
+        <img src="https://i.pinimg.com/736x/06/d6/21/06d6213c9888530982fa0d558e8f7995.jpg" alt="">
+        <h4></h4>
+        <p>Honda NSX Luxury - car aesthetic - car organization - sports cars</p>
+    </div>
+    <div class="BMW">
+        <img src="https://i.pinimg.com/236x/ff/42/5c/ff425cd7458fc00313ad403830e57a3a.jpg" alt="">
+        <h4></h4>
+        <p>BMW M4</p>
+    </div>
+    <div class="Toyota">
+        <img src="https://i.pinimg.com/236x/37/e3/86/37e3866b4551f6a6bf75be6dd014de21.jpg" alt="">
+        <h4></h4>
+        <p> toyota supra Mk4</p>
+    </div>
+
+</section>
+<script>
+    function filterCars(brand) {
+        const cards = document.querySelectorAll('.card div');
+
+        cards.forEach(card => {
+            if (brand === "All") {
+                card.style.display = 'block';
+            } else if (card.classList.contains(brand)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+</body>
+</html>
